@@ -290,7 +290,6 @@ hr {
   gap: 10px;
 }
 #version{
-  justify-content: end;
-  align-items: end;
-  text-align: end;
+text-align: right;
+  
 }
