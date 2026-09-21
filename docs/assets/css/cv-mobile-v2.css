@@ -289,3 +289,8 @@ hr {
   flex-direction: column;
   gap: 10px;
 }
+#version{
+  justify-content: end;
+  align-items: end;
+  text-align: end;
+}
