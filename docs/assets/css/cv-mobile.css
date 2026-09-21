@@ -1,0 +1,177 @@
+:root{
+    --color-1:#fff;
+    --color-2:#000080;
+    --color-3:#fbbf24;
+    --colore-4:#ffff00;
+    --color-5:#93c5fd;
+    --color-6:#e0f2fe;
+    --color-7:#f3f4f6;
+    --color-8:#0000b3;
+    --color-9:#000000;
+    --color-10:#1f2937;
+}
+html{justify-items: center;}
+body{
+   
+    max-width: 100vh;
+   border: 1px solid var(--color-2);
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    @media screen and (min_width: 360px) {
+        
+    }
+   
+}
+.header{
+    max-width: 100%;
+    background-color: var(--color-2);
+    color: var(--color-1);
+    padding: 20px;
+    text-align: center;
+    max-height: 100%;
+   }
+   .header__content{
+    border: 2px solid var(--color-1);
+    display: inline-block;
+ 
+   }
+.header__id{
+    margin: 20px 20px 0;
+    letter-spacing: 4px;
+    padding: 0 20px 20px;
+   
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+.header__def{
+    position: relative;
+    max-width: 25ch;
+    text-align: center;
+    margin: 0 auto -20px;
+    padding: 0 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: #000080;
+    
+    
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-8);
+    color:var(--color-1);
+   min-height: 44px;
+    padding: 0;
+    gap: 10px;
+    display: flex;
+    
+    
+}
+.navbar__summary{
+    display: block;
+    min-height: 44px;
+    background-color: var(--color-3);
+  min-width: 100%;
+    text-transform: uppercase;
+    font-size: 16px;
+    align-content: center;
+    text-align: center;
+}
+.navbar__div{
+    display: flex;
+    justify-content: space-around;
+    gap: 2px;
+    width: 100%;
+}
+.navbar__detail{
+       width: 100%;
+    min-height: 44px;
+    
+}
+details{
+   flex: 1;
+   transition: flex 0.3s ease;
+   max-width: 200px;
+          
+    }
+    details[open]{
+        min-width: 100%;
+
+    }
+.navbar__li{
+    list-style: none;
+    color: var(--color-1);
+    width: 100%;
+    padding: 10px;
+   }
+
+   .navbar__ul{
+    display: block;
+    background-color: #0000b3;
+    
+   }
+img{
+    padding-top: 1px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    
+}
+
+
+
+
+ul{
+    color: var(--color-10);
+}
+hr{
+    background-color: var(--color-3);
+    height: 2px;
+    border: none;
+}
+h2{
+    color: var(--color-8);
+}
+main{
+    
+    
+   
+}
+.span{
+    display: block;
+}
+details{
+    
+}
+/* Remove the default triangle */
+/* summary {
+  display: block;
+} */
+
+/* Create a new custom triangle on the right side */
+/* summary::before {
+  margin-left: 1ch;
+  display: inline-block;
+  content: '▶️';
+  transition: 0.2s;
+}
+
+details[open] > summary::before {
+  transform: rotate(90deg);
+} */
+summary::-webkit-details-marker {
+    /* list-style-type: none; */
+  display: none;
+  cursor: pointer;
+}
+/* summary::before{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/profil\ .png);
+    background-size: cover;
+    margin-right: 8px;
+
+} */
