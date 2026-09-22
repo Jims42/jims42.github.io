@@ -242,12 +242,19 @@ hr {
   text-align: justify;
   color: var(--color-4);
 }
-.nav__ul, .nav__skills__ul {
+.nav__ul {
   list-style: none;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
   justify-content: space-around;
+  gap: 8px;
+}
+.nav__skills__ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
   gap: 8px;
 }
 .nav, .nav__skills {
