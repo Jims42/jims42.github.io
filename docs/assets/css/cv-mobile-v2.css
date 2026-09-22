@@ -307,6 +307,6 @@ hr {
   position: absolute;
   bottom: 3px;
   right: 5px;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
   
 }
