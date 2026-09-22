@@ -290,7 +290,7 @@ hr {
 .nav__a .court {
   display: inline;
 }
-.nav__skills{
+.nav__skills, .groupe__skills{
   width: 100%;
 }
 
@@ -298,16 +298,14 @@ hr {
   display: none;
 }
 .groupe:target{
-  display: block;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.groupe__skills{
-  display: none;
-}
-.groupe__skills:target {
-  display: block;
+
+
+.groupe__skills:target,
+.groupe__skills:target:has(:target){
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -316,9 +314,7 @@ hr {
 .groupe__skills__skills{
   display: none;
 }
-.groupe__skills__skills:target
-.groupe__skills:target:has(.groupe__skills__skills:target){
-  display: block;
+.groupe__skills__skills:target{
   display: flex;
   flex-direction: column;
   gap: 10px;
