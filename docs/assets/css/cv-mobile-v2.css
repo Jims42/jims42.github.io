@@ -297,7 +297,27 @@ hr {
 .groupe {
   display: none;
 }
-.groupe:target {
+.groupe:target{
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.groupe__skills{
+  display: none;
+}
+.groupe__skills:target {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+.groupe__skills__skills{
+  display: none;
+}
+.groupe__skills__skills:target
+.groupe__skills:target:has(.groupe__skills__skills:target){
   display: block;
   display: flex;
   flex-direction: column;
@@ -307,6 +327,7 @@ hr {
   position: absolute;
   bottom: 3px;
   right: 5px;
-  /* margin-bottom: 0; */
+font-style: italic;
+color: var(--color-6);
   
 }
