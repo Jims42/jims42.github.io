@@ -250,7 +250,7 @@ hr {
   justify-content: space-around;
   gap: 8px;
 }
-.nav {
+.nav, .nav__skills {
   width: 100%;
 }
 .nav__li {
@@ -258,7 +258,7 @@ hr {
   text-align: center;
   min-height: 44px;
 }
-.nav__a {
+.nav__a, .nav__skills__a {
   display: flex;
   color: var(--color-1);
   height: 100%;
@@ -280,6 +280,10 @@ hr {
 .nav__a .court {
   display: inline;
 }
+.nav__skills{
+  width: 100%;
+}
+
 .groupe {
   display: none;
 }
