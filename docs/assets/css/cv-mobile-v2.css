@@ -6,8 +6,15 @@
   --color-5: #d90429;
   --color-6: #757474;
   --color-7: #f3f4f6;
-  --police: verdana, georgia, sans-serif;
+  --badge-color-comp:linear-gradient(135deg, #0f766e,#06b6d4);
+  --cadre-badge-comp:2px solid #22d3ee;
+  --badge-color-nav: linear-gradient(135deg, var(--color-6), var(--color-5));
+  --badge-color-date:linear-gradient(135deg, #8b0016,#e50020);
+  --cadre-badge-date:2px solid var(--color-3);
+  --badge-color-soft:linear-gradient(135deg, #2b303a,#4a5263);
+  --cadre-badge-soft:2px solid #cbd5e1;
   --cadre: 3px solid var(--color-3);
+  --police: verdana, georgia, sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -209,14 +216,14 @@ details[open] {
   }
   .years,
   .niveau {
-    background-color: var(--color-5);
+    background: var(--badge-color-date);
     color: var(--color-1);
     font-size: clamp(0.9rem, 2vw, 1.2rem);
     border: none;
     border-radius: 10px;
     padding: 5px;
     font-weight: bold;
-    border: 1px solid var(--color-3);
+    border:var(--cadre-badge-date);
   }
 }
 
@@ -277,7 +284,7 @@ hr {
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
-  background: linear-gradient(90deg, var(--color-5), var(--color-6));
+  background: var(--badge-color-nav);
   font-weight: bold;
   text-decoration: none;
   font-size: clamp(0.9rem, 2vw, 1.2rem);
@@ -326,4 +333,45 @@ hr {
 font-style: italic;
 color: var(--color-6);
   
+}
+
+/* BADGE COMPETENCE */
+
+.badge-card{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.badge{
+   background: var(--badge-color-comp);
+  border: var(--cadre-badge-comp);
+  color: var(--color-1);
+  font-weight: bold;
+  padding: 6px 16px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.essai{width: 60px;
+height: 60px;
+}
+.un{
+  background: linear-gradient(135deg, #8b0016,#e50020);
+  border: 2px solid #f59e0b;
+  color: #fff;
+}
+.deux{
+  background: linear-gradient(135deg, #2b303a,#4a5263);
+  border: 2px solid #cbd5e1;
+  color: #fff;
+}
+.trois{
+  background: linear-gradient(135deg, #0f766e,#06b6d4);
+  border: 2px solid #22d3ee;
+  color: #fff;
 }
