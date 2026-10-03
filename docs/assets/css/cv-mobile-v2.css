@@ -6,13 +6,13 @@
   --color-5: #d90429;
   --color-6: #757474;
   --color-7: #f3f4f6;
-  --badge-color-comp:linear-gradient(135deg, #0f766e,#06b6d4);
-  --cadre-badge-comp:2px solid #22d3ee;
+  --badge-color-comp: linear-gradient(135deg, #0f766e, #06b6d4);
+  --cadre-badge-comp: 2px solid #22d3ee;
   --badge-color-nav: linear-gradient(135deg, var(--color-6), var(--color-5));
-  --badge-color-date:linear-gradient(135deg, #8b0016,#e50020);
-  --cadre-badge-date:2px solid var(--color-3);
-  --badge-color-soft:linear-gradient(135deg, #2b303a,#4a5263);
-  --cadre-badge-soft:2px solid #cbd5e1;
+  --badge-color-date: linear-gradient(135deg, #8b0016, #e50020);
+  --cadre-badge-date: 2px solid var(--color-3);
+  --badge-color-soft: linear-gradient(135deg, #2b303a, #4a5263);
+  --cadre-badge-soft: 2px solid #cbd5e1;
   --cadre: 3px solid var(--color-3);
   --police: verdana, georgia, sans-serif;
 }
@@ -198,12 +198,7 @@ details[open] {
     color: var(--color-1);
     text-align: start;
   }
-  .card__date {
-    display: flex;
-    margin: 2px;
-    gap: 10px;
-    justify-content: right;
-  }
+
   .card__li::marker {
     color: var(--color-5);
   }
@@ -213,17 +208,6 @@ details[open] {
   .card__def {
     padding: 5px;
     text-align: justify;
-  }
-  .years,
-  .niveau {
-    background: var(--badge-color-date);
-    color: var(--color-1);
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
-    border: none;
-    border-radius: 10px;
-    padding: 5px;
-    font-weight: bold;
-    border:var(--cadre-badge-date);
   }
 }
 
@@ -260,22 +244,25 @@ hr {
   justify-content: space-around;
   gap: 8px;
 }
-.nav__skills__ul{
+.nav__skills__ul {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 8px;
 }
-.nav, .nav__skills {
+.nav,
+.nav__skills {
   width: 100%;
 }
-.nav__li, .nav__skills__li {
+.nav__li,
+.nav__skills__li {
   flex: 1;
   text-align: center;
   min-height: 44px;
 }
-.nav__a, .nav__skills__a {
+.nav__a,
+.nav__skills__a {
   display: flex;
   color: var(--color-1);
   height: 100%;
@@ -297,47 +284,50 @@ hr {
 .nav__a .court {
   display: inline;
 }
-.nav__skills, .groupe__skills{
+.nav__skills,
+.groupe__skills {
   width: 100%;
 }
 
 .groupe {
   display: none;
 }
-.groupe:target{
+.groupe:target {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-
-.groupe__skills:target,
-.groupe__skills:target:has(:target){
+.groupe__skills:target {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  
 }
-.groupe__skills__skills{
+.groupe__skills:has(#skillsdev:target),
+.groupe__skills:has(#skill-it:target) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.groupe__skills__skills {
   display: none;
 }
-.groupe__skills__skills:target{
+.groupe__skills__skills:target {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-#version{
+#version {
   position: absolute;
   bottom: 3px;
   right: 5px;
-font-style: italic;
-color: var(--color-6);
-  
+  font-style: italic;
+  color: var(--color-6);
 }
 
-/* BADGE COMPETENCE */
+/* ------------ BADGES --------------*/
 
-.badge-card{
+.badge-card {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -345,33 +335,38 @@ color: var(--color-6);
   padding: 0;
   margin: 0;
 }
-.badge{
-   background: var(--badge-color-comp);
-  border: var(--cadre-badge-comp);
+.badge {
   color: var(--color-1);
   font-weight: bold;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   padding: 6px 16px;
   border-radius: 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
 
+/* BADGE COMPETENCE */
+
+.badge--skill,
+.badge {
+  background: var(--badge-color-comp);
+  border: var(--cadre-badge-comp);
 }
-.essai{width: 60px;
-height: 60px;
+
+/* BADGE DATE */
+
+.badge--date {
+  background: var(--badge-color-date);
+  border: var(--cadre-badge-date);
 }
-.un{
-  background: linear-gradient(135deg, #8b0016,#e50020);
-  border: 2px solid #f59e0b;
-  color: #fff;
+.droite {
+  display: flex;
+  justify-content: right;
+  padding-right: 3px;
 }
-.deux{
-  background: linear-gradient(135deg, #2b303a,#4a5263);
-  border: 2px solid #cbd5e1;
-  color: #fff;
-}
-.trois{
-  background: linear-gradient(135deg, #0f766e,#06b6d4);
-  border: 2px solid #22d3ee;
-  color: #fff;
+
+.badge--soft {
+  background: var(--badge-color-soft);
+  border: var(--cadre-badge-soft);
 }
