@@ -13,6 +13,8 @@
   --cadre-badge-date: 2px solid var(--color-3);
   --badge-color-soft: linear-gradient(135deg, #2b303a, #4a5263);
   --cadre-badge-soft: 2px solid #cbd5e1;
+  --badge-color-outil: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  --cadre-badge-outil: 2px solid #60a5fa;
   --cadre: 3px solid var(--color-3);
   --police: verdana, georgia, sans-serif;
 }
@@ -366,7 +368,15 @@ hr {
   padding-right: 3px;
 }
 
+/*  BADGE SOFT SKILLS */
 .badge--soft {
   background: var(--badge-color-soft);
   border: var(--cadre-badge-soft);
+}
+
+/*  BADGE OUTILS */
+
+.badge-outil{
+  background: var(--badge-color-outil);
+  border: var(--cadre-badge-outil);
 }
