@@ -376,7 +376,7 @@ hr {
 
 /*  BADGE OUTILS */
 
-.badge-outil{
+.badge--outil{
   background: var(--badge-color-outil);
   border: var(--cadre-badge-outil);
 }
